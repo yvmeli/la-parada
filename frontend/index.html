@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Parada - Sistema de Reservaciones</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <i class="fas fa-utensils logo-icon"></i>
+            </div>
+            <h1>La Parada</h1>
+            <p>Sistema de Reservaciones</p>
+            <div class="header-decoration">
+                <svg viewBox="0 0 200 20" preserveAspectRatio="none">
+                    <path d="M0,10 C40,0 60,20 100,10 C140,0 160,20 200,10 L200,20 L0,20 Z" fill="white" opacity="0.2"></path>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="reservation-form-container">
+            <div class="section-header-card">
+                <h2><i class="fas fa-calendar-plus"></i> Nueva Reservación</h2>
+            </div>
+            <form id="reservation-form">
+                <input type="hidden" id="reservation-id">
+                <div class="form-group">
+                    <label for="name">Nombre completo:</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Fecha:</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-calendar"></i>
+                            <input type="date" id="date" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Hora:</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-clock"></i>
+                            <input type="time" id="time" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Número de personas:</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-users"></i>
+                        <input type="number" id="guests" min="1" max="20" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Notas adicionales:</label>
+                    <div class="input-with-icon textarea-container">
+                        <i class="fas fa-sticky-note"></i>
+                        <textarea id="notes" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary"><i class="fas fa-save"></i> Guardar Reservación</button>
+                    <button type="button" id="cancel-btn" class="btn secondary" style="display: none;"><i class="fas fa-times"></i> Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="reservations-list-container">
+            <div class="section-header">
+                <div class="section-header-card">
+                    <h2><i class="fas fa-list-alt"></i> Reservaciones</h2>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Buscar reservación...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="reservations-list" id="reservations-list">
+                <div class="loading">
+                    <i class="fas fa-spinner fa-pulse"></i>
+                    <span>Cargando reservaciones...</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-utensils"></i>
+                <span>La Parada</span>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Reservaciones</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Menú</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle Principal #123, Ciudad</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> info@laparada.com</p>
+            </div>
+            <div class="social-media">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Restaurante La Parada - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <template id="reservation-template">
+        <div class="reservation-card" data-id="">
+            <div class="reservation-header">
+                <h3 class="reservation-name"></h3>
+                <div class="reservation-actions">
+                    <button class="btn-edit" title="Editar reservación"><i class="fas fa-edit"></i></button>
+                    <button class="btn-delete" title="Eliminar reservación"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+            <div class="reservation-details">
+                <p class="reservation-datetime">
+                    <i class="fas fa-calendar-alt"></i> 
+                    <span class="reservation-date"></span>
+                </p>
+                <p class="reservation-time-display">
+                    <i class="fas fa-clock"></i> 
+                    <span class="reservation-time"></span>
+                </p>
+                <p class="reservation-people">
+                    <i class="fas fa-users"></i> 
+                    <span class="reservation-guests"></span> <span class="guest-text">personas</span>
+                </p>
+                <p class="reservation-contact">
+                    <i class="fas fa-phone"></i> 
+                    <span class="reservation-phone"></span>
+                </p>
+                <p class="reservation-email-display">
+                    <i class="fas fa-envelope"></i> 
+                    <span class="reservation-email"></span>
+                </p>
+                <div class="reservation-notes-container">
+                    <p class="reservation-notes"></p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <div class="modal" id="delete-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-exclamation-triangle"></i> Confirmar eliminación</h3>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de que deseas eliminar esta reservación? Esta acción no se puede deshacer.</p>
+            </div>
+            <div class="modal-actions">
+                <button id="confirm-delete" class="btn danger"><i class="fas fa-trash"></i> Eliminar</button>
+                <button id="cancel-delete" class="btn secondary"><i class="fas fa-times"></i> Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1678901234568",
+    "name": "María González",
+    "email": "maria@example.com",
+    "phone": "555-987-6543",
+    "date": "2025-03-16",
+    "time": "20:30",
+    "guests": 2,
+    "notes": "Celebración de aniversario",
+    "createdAt": "2025-03-11T09:15:30.000Z"
+  },
+  {
+    "id": "1741907174563",
+    "name": "Juan Pérez",
+    "email": "juan@example.com",
+    "phone": "555-123-4567",
+    "date": "2025-03-15",
+    "time": "19:00",
+    "guests": 4,
+    "notes": "Mesa cerca de la ventana, por favor",
+    "createdAt": "2025-03-13T23:06:14.563Z"
+  }
+]

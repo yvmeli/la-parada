@@ -1,0 +1,21 @@
+{
+    "name": "la-parada-backend",
+    "version": "1.0.0",
+    "description": "Backend para sistema de reservaciones de restaurante La Parada",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.3",
+        "cors": "^2.8.5",
+        "express": "^4.21.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.9"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
