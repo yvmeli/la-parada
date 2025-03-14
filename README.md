@@ -69,7 +69,7 @@ cd la-parada
 ## 📞 Contacto
 Si tienes alguna duda o sugerencia, ¡no dudes en contribuir o abrir un issue! 🚀
 
-proyecto-la-parada/
+la-parada/
 ├── backend/
 │   ├── data/
 │   │   └── reservations.json
