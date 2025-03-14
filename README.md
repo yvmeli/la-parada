@@ -24,8 +24,8 @@ Este proyecto es un sistema de reservaciones para el restaurante "La Parada". Pe
 
 ### 1️⃣ Clonar el repositorio
 ```bash
-git clone https://github.com/tuusuario/sistema-reservaciones.git
-cd sistema-reservaciones
+git clone https://github.com/yvmeli/la-parada
+cd la-parada
 ```
 
 ### 2️⃣ Configurar el backend
@@ -37,7 +37,7 @@ cd sistema-reservaciones
 2. Configurar variables de entorno (`.env`):
    ```env
    PORT=3000
-   DATA_FILE=reservas.json
+   DATA_FILE=backend/data/reservations.json
    ```
 3. Iniciar el servidor:
    ```bash
